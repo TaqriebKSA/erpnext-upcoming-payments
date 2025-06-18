@@ -19,7 +19,7 @@ def run(report_name, filters=None, user=None, ignore_prepared_report=False, cust
 
 	# custom code for overriding native reports
 	try:
-		from reports_addons.override_reports import reports
+		from erpnext_upcoming_payments.override_reports import reports
 		reports.main(report_name)
 	except:
 		pass
@@ -61,7 +61,7 @@ def get_script(report_name):
 	# Customized code to override js of reports
 	reports_script = frappe.get_hooks().get('app_reports_js', {})
 	if reports_script and reports_script.get(report_name):
-		script_path = frappe.get_app_path("reports_addons", reports_script.get(report_name)[0])
+		script_path = frappe.get_app_path("erpnext_upcoming_payments", reports_script.get(report_name)[0])
 
 	# Customized code to override default print format of reports
 	# reports_print = frappe.get_hooks().get('app_reports_html', {})
