@@ -1,7 +1,7 @@
 app_name = "erpnext_upcoming_payments"
-app_title = "Erpnext Upcoming Payments"
+app_title = "ERPNext Upcoming Payments"
 app_publisher = "TaqriebKSA"
-app_description = "Erpnext Upcoming Payments"
+app_description = "ERPNext Upcoming Payments"
 app_email = "admin@TaqriebKSA.com"
 app_license = "mit"
 
