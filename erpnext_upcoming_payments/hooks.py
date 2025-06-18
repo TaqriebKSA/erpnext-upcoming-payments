@@ -28,6 +28,12 @@ app_license = "mit"
 # app_include_css = "/assets/erpnext_upcoming_payments/css/erpnext_upcoming_payments.css"
 # app_include_js = "/assets/erpnext_upcoming_payments/js/erpnext_upcoming_payments.js"
 
+app_reports_js = {
+	"Accounts Payable Summary": "public/js/accounts_payable_summary.js",
+	"Accounts Payable": "public/js/accounts_payable.js"
+}
+
+
 # include js, css files in header of web template
 # web_include_css = "/assets/erpnext_upcoming_payments/css/erpnext_upcoming_payments.css"
 # web_include_js = "/assets/erpnext_upcoming_payments/js/erpnext_upcoming_payments.js"
@@ -174,9 +180,10 @@ app_license = "mit"
 # Overriding Methods
 # ------------------------------
 #
-# override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "erpnext_upcoming_payments.event.get_events"
-# }
+override_whitelisted_methods = {
+	"frappe.desk.query_report.get_script": "erpnext_upcoming_payments.whitelisted.get_script",
+    "frappe.desk.query_report.run": "erpnext_upcoming_payments.whitelisted.run",
+}
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,

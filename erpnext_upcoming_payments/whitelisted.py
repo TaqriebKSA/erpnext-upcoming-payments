@@ -1,18 +1,7 @@
 import frappe
-from frappe import _, msgprint
-import datetime
-import calendar
-from frappe.utils import cint, date_diff, flt, getdate, add_days, nowdate, cstr
+from frappe import _
 import json
-from six import string_types, iteritems
-from erpnext.accounts.doctype.pricing_rule.pricing_rule import get_pricing_rule_for_item
-from erpnext.accounts.utils import get_account_currency
-from erpnext.controllers.accounts_controller import AccountsController, get_supplier_block_status
-from erpnext.accounts.doctype.payment_entry.payment_entry import get_negative_outstanding_invoices, \
-	get_orders_to_be_billed
-from erpnext.setup.utils import get_exchange_rate
-import erpnext
-from erpnext.accounts.utils import get_held_invoices
+from six import string_types
 import os
 
 @frappe.whitelist()
